@@ -2,8 +2,8 @@
 
 int main() {
     char estado [20];
-    char codigo;
-    char cidade [30];
+    char codigo [10];
+    char cidade [20];
     float populacao, area, pib;
     int turistico;
 
@@ -13,9 +13,10 @@ int main() {
 
     printf ("Qual é o código do estado? \n");
     scanf ("%s", &codigo);
-
-    printf ("Qual é a sua cidade? \n");
-    fgets (cidade, 31, stdin);
+    
+    fgetc(stdin);
+    printf ("Qual é a sua cidade? \n"); 
+    fgets (cidade, 21, stdin);
 
     printf ("Diga a população: \n");
     scanf ("%f", &populacao);
@@ -29,7 +30,7 @@ int main() {
     printf ("Diga quantos pontos turisticos tem: \n");
     scanf ("%d", &turistico);
 
-    printf ("A cidade de %s que fica no estado de %s tem o seguinte codigo: %s", cidade, estado, codigo);
-    printf ("A mesma cidade citada a cima tem %f habitantes, %f metros quadrados, um pib no valor de %f$ e %d pontos turisticos", populacao, area, pib, turistico);
+    printf ("A cidade de %s que fica no estado de %s tem o seguinte codigo: %s \n", cidade, estado, codigo);
+    printf ("A mesma cidade citada a cima tem %f habitantes, %f metros quadrados, um pib no valor de %f$ e %d pontos turisticos.", populacao, area, pib, turistico);
     return 0;
 }
